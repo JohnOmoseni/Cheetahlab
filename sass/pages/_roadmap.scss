@@ -1,0 +1,140 @@
+@use "../abstracts/index" as *;
+
+
+.wrapper .roadmap-section {
+   position: relative;
+
+   .pseudo-element {
+      position: absolute;
+      top: 2rem;
+      width: 50%;
+      height: calc(100% - 1rem);
+      border-radius: 0 0 0 $br-light;
+      border: 1px solid transparent;
+      border-left-color: var(--br-clr-200);
+      border-bottom-color: var(--br-clr-200)
+   }
+
+   .even-columns {
+      @include flex-column();
+      gap: $pad-500;
+      margin: $pad-800 $pad-400 0;
+
+      .col {
+         position: relative;
+         width: 100%;
+
+         .phase {
+            position: relative;
+            font-family: $ff-primary-header;
+
+            &.phase-1 {
+               color: var(--text-sec-100);
+            }
+         }
+
+         .container {
+            @include flex-column();
+            gap: $pad-small;
+            position: relative;
+            padding: $pad-300 $pad-500;
+
+            li {
+               list-style-type: disc;
+            }
+
+
+         }
+      }
+
+
+   }
+}
+
+@mixin roadmap-section-laptop {
+   .wrapper .roadmap-section {
+
+      --br: 80px;
+
+      .even-columns {
+         margin: $pad-600 $pad-400 0;
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+
+         .col {
+            .phase {
+               position: absolute;
+               white-space: nowrap;
+            }
+
+            .container {
+               padding: 3em;
+            }
+
+            // .container {
+            //    padding: 3em;
+
+            //    &::before {
+            //       content: "";
+            //       position: absolute;
+            //       left: -1.26em;
+            //       top: 1em;
+            //       bottom: 0;
+            //       width: calc(100% + 1.5rem);
+            //       height: 270px;
+            //       border: 1px solid blue;
+            //       // border-top-color: transparent;
+            //       border-radius: 0px 0px 80px 80px / 0px 0px 20px 60px;
+
+            //    }
+
+            //    &.container1 {
+            //       &::before {
+            //          border-top-color: transparent;
+            //          border-right-color: transparent;
+
+            //       }
+            //    }
+
+            //    &.container2 {
+            //       &::before {
+            //          left: -2em;
+            //          border-radius: 80px 80px 0px 0px / 40px 40px 0px 0px;
+            //          border-bottom-color: transparent;
+            //          border-right-color: transparent;
+            //       }
+            //    }
+
+            //    &.container3 {
+            //       &::before {
+            //          left: -2.1em;
+            //          border-top-color: transparent;
+            //       }
+            //    }
+            // }
+         }
+
+
+         .phase-1 {
+            bottom: -0.5rem;
+            left: 20%;
+            transform: translateX(-10%);
+
+         }
+
+         .phase-2 {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+         }
+
+         .phase-3 {
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+         }
+      }
+
+   }
+
+}

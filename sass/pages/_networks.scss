@@ -1,0 +1,44 @@
+@use "../abstracts/index" as *;
+
+
+.wrapper .network-section {
+
+   .network-logos {
+      margin: $pad-600 auto $pad-400;
+      width: max-content;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $pad-300;
+      place-items: center;
+
+      .network {
+         @include flex-column();
+         gap: $pad-150;
+         background: #0E0E0E;
+         padding: $pad-200;
+         border-radius: $br-light;
+         align-items: center;
+
+         .logo {
+            width: 100%;
+         }
+
+         .title {
+            font-size: $fs-400;
+            font-family: $ff-primary-header;
+         }
+      }
+   }
+}
+
+@mixin network-section-laptop {
+   .wrapper .network-section {
+
+      .network-logos {
+         margin: $pad-800 auto 0;
+         width: max-content;
+         grid-template-columns: repeat(4, 1fr);
+
+      }
+   }
+}

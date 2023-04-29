@@ -1,0 +1,38 @@
+@use '../abstracts/' as *;
+
+
+%connect-btn {
+  --bg: var(--btn-bg);
+
+  @include button-reset();
+  @include flex-row();
+  gap: $pad-100;
+
+  width: max-content;
+  text-transform: uppercase;
+  padding: 0.3em $pad-200;
+
+  color: var(--dark-clr);
+  font-weight: $fw-semi-bold;
+  font-family: $ff-primary-header;
+  background: var(--bg);
+  border: 1px solid var(--bg);
+  border-radius: $br-light;
+  box-shadow: $bs-100;
+  transition: $transition-100;
+
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  span {
+    line-height: 1;
+  }
+}
+
+
+.wrapper .connect-btn {
+  @extend %connect-btn;
+
+}

@@ -1,0 +1,39 @@
+@use "../abstracts/" as *;
+
+.menu-backdrop {
+  width: 100%;
+  height: 100%;
+  background: rgba(black, 0.2);
+  backdrop-filter: $backdrop;
+  display: block;
+
+  position: fixed;
+  inset: 0;
+  z-index: $z-index-300;
+  transition: $transition-100;
+
+  .menu-block {
+    width: 80%;
+    height: 100%;
+    background: rgba(black, 0.9);
+    display: grid;
+    grid-template-rows: 1fr max-content min-content;
+    place-items: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: -2px 0px 10px 10px rgba(black, 0.3), ;
+
+    .close-menu {
+      @include close-overlay()
+    }
+  }
+}
+
+
+@mixin menu-laptop() {
+  .menu-backdrop {
+    display: none;
+  }
+}

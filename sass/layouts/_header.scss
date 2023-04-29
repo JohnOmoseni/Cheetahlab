@@ -1,0 +1,83 @@
+@use "../abstracts/" as *;
+@use "../components/button" as *;
+
+header {
+  @include flex-row();
+  gap: 1em;
+
+  padding: $pad-200;
+  margin: $pad-200 3%;
+  background: var(--header-bg);
+  border-radius: $br-light;
+  box-shadow: $bs-100;
+  backdrop-filter: $backdrop;
+  -webkit-backdrop-filter: $backdrop;
+  z-index: $z-index-200;
+
+  .logo {
+    margin-right: auto;
+    width: 10em;
+    cursor: pointer;
+  }
+
+  .menu {
+    @include flex-row();
+    gap: $pad-100;
+    cursor: pointer;
+
+    .line {
+      position: relative;
+      top: -0.3em;
+      width: 62px;
+      height: 2px;
+      border-radius: $br-light;
+      background: var(--white-clr);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: $pad-150;
+        width: 62px;
+        height: 2px;
+        border-radius: inherit;
+        background: inherit;
+      }
+    }
+
+    p {
+      text-transform: uppercase;
+      font-family: $ff-primary-header;
+      letter-spacing: $ls-100;
+      color: var(--text-grey-100);
+      line-height: 1.2;
+      display: none;
+    }
+  }
+
+  .connect-btn {
+    display: none !important;
+    ;
+  }
+
+
+}
+
+
+@mixin header-laptop() {
+  header {
+    padding: $pad-100 $pad-200;
+
+    .menu {
+      margin-inline: 30% auto;
+      cursor: pointer;
+
+      p {
+        display: block;
+      }
+    }
+
+    .connect-btn {
+      display: flex !important;
+    }
+  }
+}

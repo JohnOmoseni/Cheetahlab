@@ -1,0 +1,30 @@
+@use './abstracts/' as *;
+@use './base/' as *;
+
+@use './layouts/loader' as *;
+
+@use './layouts/menu' as *;
+@use './layouts/header' as *;
+@use './layouts/hero' as *;
+@use './layouts/main' as *;
+@use './layouts/footer' as *;
+
+
+@use './pages/values' as *;
+
+@media screen and (min-width: 780px) and (max-width: 1000px) {
+   @include main-tablet();
+
+}
+
+@media screen and (min-width: 790px) {
+   @include header-laptop();
+   @include hero-section-laptop();
+   @include main-laptop();
+   @include footer-laptop();
+
+}
+
+@media screen and (min-width: 1000px) {
+   @include value-section-laptop();
+}

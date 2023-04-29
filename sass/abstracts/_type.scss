@@ -1,0 +1,65 @@
+@font-face {
+   font-family: 'Kinn';
+   src: url('/assets/fonts/Kinn-Heavy.ttf');
+}
+
+// @font-face {
+//   font-family: 'Poppins';
+//   src: url('/assets/fonts/Poppins.ttf');
+// }
+
+
+
+// Font-Family
+$ff-family: "Poppins", Arial, sans-serif;
+$ff-body: $ff-family;
+$ff-primary-header: "Kinn", Helvetica, Arial, sans-serif;
+$ff-variant: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+
+// Font-Weight
+$fw-regular: 400;
+$fw-semi-bold: 600;
+$fw-bold: 800;
+
+// Font-Size
+$fs-100: 0.7rem;
+$fs-200: 0.825rem;
+$fs-300: 0.9rem;
+$fs-400: 1rem;
+$fs-500: 1.3rem;
+$fs-600: 2rem;
+$fs-700: clamp(33px, 8vw, 60px);
+$fs-800: clamp(60px, 6vw, 96px);
+
+$fs-small-text: $fs-100;
+$fs-nav-links: $fs-200;
+$fs-body: $fs-300;
+$fs-button: $fs-200;
+$fs-primary-header: $fs-800;
+$fs-secondary-header: $fs-700;
+$fs-subtitle: $fs-600;
+
+
+// position: absolute;
+// width: 89.82px;
+// height: 89.79px;
+// left: 1230.84px;
+// top: 754.31px;
+
+// transform: rotate(-1.47deg);
+
+
+// position: absolute;
+// width: 46px;
+// height: 46px;
+// left: 131px;
+// top: 500px;
+
+// /* Primary/Variant1 */
+
+// background: #7200F7;
+// mix-blend-mode: screen;
+// /* Primary/Variant1 */
+
+// border: 92px solid #7200F7;
+// filter: blur(10px);

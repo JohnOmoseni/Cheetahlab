@@ -1,0 +1,35 @@
+@use "../abstracts/index" as *;
+
+.wrapper .aim-section {
+
+   .even-columns {
+      @include flex-column();
+      gap: $pad-500;
+      width: 90%;
+      margin: auto;
+      margin-block: $pad-600;
+
+   }
+
+   .column-1 {
+      @include bg-image(url("/assets/images/Gradient4.png"));
+      text-align: center;
+      padding: $pad-600 $pad-300;
+      color: var(--text-grey-100);
+      border: 1px solid var(--br-clr);
+      border-radius: $br-light;
+      font-family: $ff-primary-header;
+   }
+}
+
+@mixin aim-section-laptop {
+   .wrapper .aim-section {
+      .even-columns {
+
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: $pad-500;
+      }
+
+   }
+}

@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+@use '../pages/' as *;
+
+@mixin main-tablet() {
+   @include values-section-tablet();
+}
+
+@mixin main-laptop() {
+   // @include value-section-laptop();
+   @include aim-section-laptop();
+   @include product-section-laptop();
+   @include roadmap-section-laptop();
+   @include network-section-laptop();
+
+}

@@ -1,0 +1,32 @@
+@use '../abstracts/' as *;
+
+main {
+  width: 100%;
+  position: relative;
+  background: var(--body-bg);
+
+  section {
+    margin: $pad-600 3% 0;
+    padding-block: $pad-300;
+
+    .heading {
+      text-align: center;
+      margin: $pad-300 0;
+      font-family: $ff-primary-header;
+
+      .text-variant {
+        color: var(--text-sec-100);
+        letter-spacing: $ls-100;
+        position: relative;
+
+        img {
+          position: absolute;
+          bottom: 0;
+          right: 0em;
+          width: 90%;
+          height: 8px
+        }
+      }
+    }
+  }
+}
