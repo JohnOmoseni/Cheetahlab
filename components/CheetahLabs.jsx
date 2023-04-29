@@ -7,9 +7,11 @@ import HomeMain from "./Pages/Home/Main/HomeMain";
 function CheetahLabs() {
   return (
     <div className="wrapper">
-      <Header />
-      <HomeMain />
-      <Footer />
+      <div className="home-page">
+        <Header />
+        <HomeMain />
+        <Footer />
+      </div>
     </div>
   );
 }
